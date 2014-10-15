@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+}
+.tab{
+    width: 280px;
+    margin:auto;
+}
+ul{
+    margin-top:20px;
+}
+ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right:20px;
+    padding:10px 20px;
+    background-color: grey;
+}
+ul li.active{
+    background-color: red;
+}
+.list-show{
+    border:1px solid darkgrey;
+    margin-top:12px;
+    width:270px;
+    text-indent: 18px;
+    height: 300px;
+}

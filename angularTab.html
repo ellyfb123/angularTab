@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Tab</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script type="text/javascript" src="js/angularTab.js"></script>
+</head>
+<body ng-app="angularTab">
+<div ng-controller="tabController as tab" class="tab">
+    <ul>
+        <li ng-class="{active:tab.isTab(1)}" ng-click="tab.setTab(1)">html</li>
+        <li ng-class="{active:tab.isTab(2)}" ng-click="tab.setTab(2)">jquery</li>
+        <li ng-class="{active:tab.isTab(3)}" ng-click="tab.setTab(3)">css</li>
+    </ul>
+    <div ng-repeat="comment in tab.comments" class="list-show">
+        <p ng-show="tab.isTab(1)">{{comment.html}}</p>
+
+        <p ng-show="tab.isTab(2)">{{comment.jquery}}</p>
+
+        <p ng-show="tab.isTab(3)">{{comment.css}}</p>
+    </div>
+</div>
+</body>
+</html>
